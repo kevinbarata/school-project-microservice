@@ -1,0 +1,1005 @@
+{
+	"info": {
+		"_postman_id": "45da2771-f6f8-4b92-aca0-e2e4f133d7fc",
+		"name": "School",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18098017"
+	},
+	"item": [
+		{
+			"name": "teacher",
+			"item": [
+				{
+					"name": "action",
+					"item": [
+						{
+							"name": "getAllEssay",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\" : \"\",\r\n    \"taskName\" : \"\",\r\n    \"requestFor\" : \"\",\r\n    \"requestBy\" : \"\",\r\n    \"userId\" : 6,\r\n    \"token\": \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE4NjExOTM1fQ.arUm3ezCgPCLF3ldlwL5j40VoV5L-JoCJRLpS_Y7q76jnGlHdRmaXM5re1SkDPVa8xfP1iPKGSBXUh_e7hhYUg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/teacher/action/getAllEssay",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"teacher",
+										"action",
+										"getAllEssay"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "markEssayAsCompleted",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"teacherId\" : 6,\r\n    \"essayId\" : 2,\r\n    \"token\": \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE5NzQwNDM4fQ.oAn5CRQX8doPK6uxXEHCv6UZWQKj6yVczAGswnkpm9W_sUMpjYCFIPh_lt8L4GqUqdzOnFrImRwHJ0cbNO3iqw\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/teacher/action/markEssayAsCompleted",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"teacher",
+										"action",
+										"markEssayAsCompleted"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createELearningMaterial",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"teacherId\" : 6,\r\n    \"course\" : \"Matematika\",\r\n    \"subject\" : \"Pengertian suku,koefisien,konstanta, dan variabel\",\r\n    \"text\" : \"1. Variabel adalah lambing pengganti nilai yang belum diketahui. Variabel biasanya dilambangkan dengan huruf abjad.Variabel bisa juga dibentuk oleh dua huruf ataupun tiga huruf dan dituliskan dalam berbagai operasi hitung. Contohnya : Dalam bentuk aljabar 2x +7 Variabelnya adalah x 2. Koefisien merupakan angka yang biasanya mengiringi huruf atau variabel. Koefisien terletak didepan huruf. Contohnya : Dalam bentuk aljabar 2x +7 koefisiennya adalah 2 3. Konstanta, merupakan angka yang terdapat dalam persamaan dan berdiri sendiri. Tidak ada huruf atau variabel yang mengikuti di belakangnya. Contohnya : Dalam bentuk aljabar 2x +7 konstantanya adalah 7 4. Suku adalah bagian dari bentuk aljabar yang dipisahkan oleh operasi hitung,yaitu: a. Suku Sejenis adalah suku-suku dalam bentuk aljabar yang mempunyai variabel yang sama, sehingga dapat dijumlahkan atau dikurangkan. Contohnya : 2x dan 4x  b. Suku Tak Sejenis adalah suku-suku dalam bentuk aljabar yang mempunyai variabel yang berbeda. Contohnya : 2x dan 4y\",\r\n    \"token\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE5NzQwNDM4fQ.oAn5CRQX8doPK6uxXEHCv6UZWQKj6yVczAGswnkpm9W_sUMpjYCFIPh_lt8L4GqUqdzOnFrImRwHJ0cbNO3iqw\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/teacher/action/createELearningMaterial",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"teacher",
+										"action",
+										"createELearningMaterial"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllMaterial",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"teacherId\" : 6,\r\n    \"course\" : \"\",\r\n    \"subject\" : \"aljabar\",\r\n    \"token\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE5NzQwNDM4fQ.oAn5CRQX8doPK6uxXEHCv6UZWQKj6yVczAGswnkpm9W_sUMpjYCFIPh_lt8L4GqUqdzOnFrImRwHJ0cbNO3iqw\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/teacher/action/getAllMaterial",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"teacher",
+										"action",
+										"getAllMaterial"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createNewEssay",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"teacherId\" : 6,\r\n    \"studentId\" : 6,\r\n    \"course\" : \"Bahasa Indonesia\",\r\n    \"question\" : \"Sebutkan 10 contoh persamaan kata!\",\r\n    \"token\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE5NzQwNDM4fQ.oAn5CRQX8doPK6uxXEHCv6UZWQKj6yVczAGswnkpm9W_sUMpjYCFIPh_lt8L4GqUqdzOnFrImRwHJ0cbNO3iqw\"\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/teacher/action/createNewEssay",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"teacher",
+										"action",
+										"createNewEssay"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\" : \"kevin11barata@gmail.com\",\r\n    \"phone\" : \"082299350916\",\r\n    \"username\" : \"suranto\",\r\n    \"password\" : \"Rahasia123\",\r\n    \"code\" : 613245\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/teacher/user/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"teacher",
+										"user",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\" : \"kevin11barata@gmail.com\",\r\n    // \"phone\" : \"082299350916\",\r\n    // \"username\" : \"suranto\",\r\n    \"password\" : \"Rahasia123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/teacher/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"teacher",
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "logout",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\" : \"6\",\r\n    \"token\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE5NzQwNDM4fQ.oAn5CRQX8doPK6uxXEHCv6UZWQKj6yVczAGswnkpm9W_sUMpjYCFIPh_lt8L4GqUqdzOnFrImRwHJ0cbNO3iqw\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/teacher/user/logout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"teacher",
+										"user",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "changePassword",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\" : \"6\",\r\n    \"token\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE5NzQwNDM4fQ.oAn5CRQX8doPK6uxXEHCv6UZWQKj6yVczAGswnkpm9W_sUMpjYCFIPh_lt8L4GqUqdzOnFrImRwHJ0cbNO3iqw\",\r\n    \"oldPassword\" : \"Rahasia123\",\r\n    \"newPassword\" : \"Rahasia12345\",\r\n     \"newPasswordSecond\" : \"Rahasia12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/teacher/user/changePassword",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"teacher",
+										"user",
+										"changePassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "forgetPassword",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"code\" : \"417197\",\r\n    \"email\" : \"kevin11barata@gmail.com\",\r\n    \"newPassword\" : \"Rahasia123456\",\r\n    \"newPasswordSecond\" : \"Rahasia123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/teacher/user/forgetPassword",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"teacher",
+										"user",
+										"forgetPassword"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "request",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\" : \"kevin11barata@gmail.com\",\r\n    \"type\" : \"Register\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/teacher/auth/request",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"teacher",
+										"auth",
+										"request"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "info",
+					"item": [
+						{
+							"name": "getAllStudent",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"teacherId\" : 6,\r\n    \"major\" : \"\",\r\n    \"grade\" : \"\",\r\n    \"token\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE5NzQwNDM4fQ.oAn5CRQX8doPK6uxXEHCv6UZWQKj6yVczAGswnkpm9W_sUMpjYCFIPh_lt8L4GqUqdzOnFrImRwHJ0cbNO3iqw\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/teacher/info/getAllStudent",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"teacher",
+										"info",
+										"getAllStudent"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getBiodataByStudentId",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"teacherId\" : 6,\r\n    \"studentId\" : 7,\r\n    \"token\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE5NzQwNDM4fQ.oAn5CRQX8doPK6uxXEHCv6UZWQKj6yVczAGswnkpm9W_sUMpjYCFIPh_lt8L4GqUqdzOnFrImRwHJ0cbNO3iqw\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/teacher/info/getBiodataByStudentId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"teacher",
+										"info",
+										"getBiodataByStudentId"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getStudentAttendance",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"teacherId\" : 6,\r\n    \"studentId\" : \"\",\r\n    \"token\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE5NzQwNDM4fQ.oAn5CRQX8doPK6uxXEHCv6UZWQKj6yVczAGswnkpm9W_sUMpjYCFIPh_lt8L4GqUqdzOnFrImRwHJ0cbNO3iqw\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/teacher/info/getStudentAttendance",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"teacher",
+										"info",
+										"getStudentAttendance"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "biodata",
+					"item": [
+						{
+							"name": "addTeacherBiodata",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"teacherId\" : 6,\r\n    \"teacherName\" : \"Suranto S.Pd.\",\r\n    \"gender\" : \"Laki-laki\",\r\n    \"marriageStatus\" : \"Menikah\",\r\n    \"education\" : \"S1 Pendidikan\",\r\n    \"bornCity\" : \"Solo\",\r\n    \"birthDay\" : \"05/07/1975\",\r\n    \"province\" : \"Jawa Barat\",\r\n    \"city\" : \"Kabupaten Bekasi\",\r\n    \"district\" : \"Pondok Cabe\",\r\n    \"address\" : \"Jalan Panjang 2 No.23\",\r\n    \"token\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE5NzQwNDM4fQ.oAn5CRQX8doPK6uxXEHCv6UZWQKj6yVczAGswnkpm9W_sUMpjYCFIPh_lt8L4GqUqdzOnFrImRwHJ0cbNO3iqw\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/teacher/biodata/addTeacherBiodata",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"teacher",
+										"biodata",
+										"addTeacherBiodata"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getBiodataByTeacherId",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"teacherId\" : 6,\r\n    \"token\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE5NzQwNDM4fQ.oAn5CRQX8doPK6uxXEHCv6UZWQKj6yVczAGswnkpm9W_sUMpjYCFIPh_lt8L4GqUqdzOnFrImRwHJ0cbNO3iqw\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/teacher/biodata/getBiodataByTeacherId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"teacher",
+										"biodata",
+										"getBiodataByTeacherId"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "attendance",
+					"item": [
+						{
+							"name": "checkIn",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"teacherId\" : 6,\r\n    \"checkInLocation\" : \"SMA 70 Babelan Utara\",\r\n    \"token\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE5NzQwNDM4fQ.oAn5CRQX8doPK6uxXEHCv6UZWQKj6yVczAGswnkpm9W_sUMpjYCFIPh_lt8L4GqUqdzOnFrImRwHJ0cbNO3iqw\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/teacher/attendance/checkIn",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"teacher",
+										"attendance",
+										"checkIn"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "checkOut",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"teacherId\" : 6,\r\n    \"checkOutLocation\" : \"SMA 70 Babelan Utara\",\r\n    \"token\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE5NzQwNDM4fQ.oAn5CRQX8doPK6uxXEHCv6UZWQKj6yVczAGswnkpm9W_sUMpjYCFIPh_lt8L4GqUqdzOnFrImRwHJ0cbNO3iqw\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/teacher/attendance/checkOut",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"teacher",
+										"attendance",
+										"checkOut"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "E-Learning",
+					"item": [
+						{
+							"name": "getAllEssay",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\" : \"\",\r\n    \"taskName\" : \"\",\r\n    \"requestFor\" : \"\",\r\n    \"requestBy\" : \"\",\r\n    \"studentId\" : 6,\r\n    \"token\": \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE4NjExOTM1fQ.arUm3ezCgPCLF3ldlwL5j40VoV5L-JoCJRLpS_Y7q76jnGlHdRmaXM5re1SkDPVa8xfP1iPKGSBXUh_e7hhYUg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/student/learning/getAllEssay",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"student",
+										"learning",
+										"getAllEssay"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sendEssayAnswer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"essayId\" : 2,\r\n    \"answer\" : \"lambat-cepat, buruk-baik, lemah-lembut\",\r\n    \"studentId\" : 6,\r\n    \"token\": \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE4NjExOTM1fQ.arUm3ezCgPCLF3ldlwL5j40VoV5L-JoCJRLpS_Y7q76jnGlHdRmaXM5re1SkDPVa8xfP1iPKGSBXUh_e7hhYUg\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/student/learning/sendEssayAnswer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"student",
+										"learning",
+										"sendEssayAnswer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllMaterial",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"studentId\" : 6,\r\n    \"course\" : \"matematika\",\r\n    \"subject\" : \"aljabar\",\r\n    \"token\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE5NzQyNjY1fQ.Y9JbKqmEYeiHaJSaQ2bYDyMSQAHt21oPlYfj_Txdovrud9uMbR3wZ2xPTYK69tPWRavIUKXz4K3FZBicbJHUFQ\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/student/learning/getAllMaterial",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"student",
+										"learning",
+										"getAllMaterial"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\" : \"kevin11barata@gmail.com\",\r\n    \"phone\" : \"082299350916\",\r\n    \"username\" : \"kevin\",\r\n    \"password\" : \"Rahasia123\",\r\n    \"code\" : 613245\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/student/user/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"student",
+										"user",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\" : \"kevin11barata@gmail.com\",\r\n    // \"phone\" : \"082299350916\",\r\n    // \"username\" : \"komang\",\r\n    \"password\" : \"Rahasia123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/student/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"student",
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "logout",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\" : \"6\",\r\n    \"token\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE5NzQyNjY1fQ.Y9JbKqmEYeiHaJSaQ2bYDyMSQAHt21oPlYfj_Txdovrud9uMbR3wZ2xPTYK69tPWRavIUKXz4K3FZBicbJHUFQ\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/student/user/logout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"student",
+										"user",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "changePassword",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\" : \"6\",\r\n    \"token\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE5NzQyNjY1fQ.Y9JbKqmEYeiHaJSaQ2bYDyMSQAHt21oPlYfj_Txdovrud9uMbR3wZ2xPTYK69tPWRavIUKXz4K3FZBicbJHUFQ\",\r\n    \"oldPassword\" : \"Rahasia123\",\r\n    \"newPassword\" : \"Rahasia12345\",\r\n     \"newPasswordSecond\" : \"Rahasia12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/student/user/changePassword",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"student",
+										"user",
+										"changePassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "forgetPassword",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"code\" : \"417197\",\r\n    \"email\" : \"kevin11barata@gmail.com\",\r\n    \"newPassword\" : \"Rahasia123456\",\r\n    \"newPasswordSecond\" : \"Rahasia123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/student/user/forgetPassword",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"student",
+										"user",
+										"forgetPassword"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "request",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\" : \"kevin11barata@gmail.com\",\r\n    \"type\" : \"Register\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/student/auth/request",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"student",
+										"auth",
+										"request"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "biodata",
+					"item": [
+						{
+							"name": "addStudentBiodata",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"studentId\" : 6,\r\n    \"studentName\" : \"Jaja Utomo\",\r\n    \"gender\" : \"Laki-laki\",\r\n    \"major\" : \"IPA\",\r\n    \"grade\" : \"IX\",\r\n    \"motherName\" : \"Sumiyati\",\r\n    \"fatherName\" : \"Sodikin\",\r\n    \"religion\" : \"Islam\",\r\n    \"bornCity\" : \"Bekasi\",\r\n    \"birthDay\" : \"10/09/2011\",\r\n    \"province\" : \"Jawa Barat\",\r\n    \"city\" : \"Kota Bekasi\",\r\n    \"district\" : \"Pondok Gede\",\r\n    \"address\" : \"Jalan Jatiwaringin 1 No.20\",\r\n    \"token\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE5NzQyNjY1fQ.Y9JbKqmEYeiHaJSaQ2bYDyMSQAHt21oPlYfj_Txdovrud9uMbR3wZ2xPTYK69tPWRavIUKXz4K3FZBicbJHUFQ\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/student/biodata/addStudentBiodata",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"student",
+										"biodata",
+										"addStudentBiodata"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getBiodataByStudentId",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"studentId\" : 6,\r\n    \"token\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE5NzQyNjY1fQ.Y9JbKqmEYeiHaJSaQ2bYDyMSQAHt21oPlYfj_Txdovrud9uMbR3wZ2xPTYK69tPWRavIUKXz4K3FZBicbJHUFQ\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/student/biodata/getBiodataByStudentId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"student",
+										"biodata",
+										"getBiodataByStudentId"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "attendance",
+					"item": [
+						{
+							"name": "checkIn",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"studentId\" : 6,\r\n    \"checkInLocation\" : \"SMA 70 Babelan Utara\",\r\n    \"token\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE5NzQyNjY1fQ.Y9JbKqmEYeiHaJSaQ2bYDyMSQAHt21oPlYfj_Txdovrud9uMbR3wZ2xPTYK69tPWRavIUKXz4K3FZBicbJHUFQ\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/student/attendance/checkIn",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"student",
+										"attendance",
+										"checkIn"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "checkOut",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"studentId\" : 6,\r\n    \"checkOutLocation\" : \"SMA 70 Babelan Utara\",\r\n    \"token\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzE5NzQyNjY1fQ.Y9JbKqmEYeiHaJSaQ2bYDyMSQAHt21oPlYfj_Txdovrud9uMbR3wZ2xPTYK69tPWRavIUKXz4K3FZBicbJHUFQ\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/student/attendance/checkOut",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"student",
+										"attendance",
+										"checkOut"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
